@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR Code Scanner</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+    <script src="app.js" defer></script> <!-- Reference to your external JS file -->
 </head>
 <body>
-  <div class="container">
     <h1>QR Code Scanner</h1>
-    <div id="reader" width="600px"></div>
-    <p id="result">Scan a QR code to get the result.</p>
-  </div>
-
-  <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
-  <script src="app.js"></script>
+    <p>Scan a QR code to get the result.</p>
+    <div id="reader" width="600px"></div> <!-- QR Code scanning area -->
 </body>
 </html>
