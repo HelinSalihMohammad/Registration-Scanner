@@ -20,11 +20,15 @@ function onScanError(errorMessage) {
     console.error(errorMessage); // Handle any scan errors
 }
 
-// Initialize the QR code scanner
-const html5QrcodeScanner = new Html5QrcodeScanner(
-    "reader", {
-        fps: 10, // frames per second
-        qrbox: 250 // size of the scanning box
-    });
+// Initialize the scanner
+const html5QrCode = new Html5Qrcode("reader");
 
-html5QrcodeScanner.render(onScanSuccess, onScanError);
+html5QrCode.start(
+    { facingMode: "environment" }, // Use rear camera
+    {
+        fps: 10, // Scanning frames per second
+        qrbox: 250, // Set the scanning box size
+    },
+    onScanSuccess,
+    onScanError
+);
