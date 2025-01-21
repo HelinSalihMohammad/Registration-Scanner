@@ -10,28 +10,7 @@
     <h1>QR Code Scanner</h1>
     <div id="reader" style="width: 500px; height: 500px;"></div>
 
-    <script type="text/javascript">
-      function onScanSuccess(decodedText, decodedResult) {
-        // Display the decoded QR code text
-        alert("QR Code Scanned: " + decodedText);
-      }
-
-      function onScanError(error) {
-        console.warn(error);
-      }
-
-      // Initialize the scanner
-      const html5QrCode = new Html5Qrcode("reader");
-
-      html5QrCode.start(
-        { facingMode: "environment" }, // Use rear camera
-        {
-          fps: 10, // Scanning frames per second
-          qrbox: 250, // Set the scanning box size
-        },
-        onScanSuccess,
-        onScanError
-      );
-    </script>
+    <!-- Link to app.js -->
+    <script src="app.js"></script>
   </body>
 </html>
